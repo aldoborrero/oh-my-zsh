@@ -21,7 +21,8 @@ function virtualenv_info {
 
 function rbenv_info {
   local ruby_version
-  ruby_version=$(rbenv version-name 2> /dev/null) || return
+  [[ ! $(rbenv version-name 2> /dev/null ) = "1.9.3-p125" ]] || return
+  ruby_version=$(rbenv version-name 2> /dev/null)
   echo "rbenv:$ruby_version"
 }
 
@@ -47,4 +48,4 @@ PROMPT='
 %{$fg[blue]%}$(hostname)%{$fg[yellow]%}%~%{$reset_color%}
 ${prompt_status} %{$reset_color%}'
 
-RPROMPT='$(virtualenv_info) $(rbenv_info) $(hg_prompt) $(git_prompt)'
+RPROMPT='%{$fg[green]%}$(virtualenv_info) %{$fg[red]%}$(rbenv_info) %{$fg_bold[cyan]%}$(hg_prompt) %{$fg_bold[yellow]%}$(git_prompt)%{$reset_color%}'
