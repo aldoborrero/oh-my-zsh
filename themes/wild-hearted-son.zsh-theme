@@ -2,8 +2,8 @@
 #
 # Author: Aldo Borrero (@axold)
 # URL: http://aldoborrero.com/
-# Repo: https://github.com/andyfleming/oh-my-zsh
-# Direct Link: https://github.com/andyfleming/oh-my-zsh/blob/master/themes/wild-hearted-son.zsh-theme
+# Repo: https://github.com/aldoborrero/oh-my-zsh
+# Direct Link: https://github.com/aldoborrero/oh-my-zsh/blob/master/themes/wild-hearted-son.zsh-theme
 #
 # Created on:       August 1, 2012
 #
@@ -40,7 +40,7 @@ function git_prompt {
 
 # Prompt status (red when something goes wrong, green otherwise)
 # Inspired by: https://github.com/topfunky/zsh-simple/blob/master/.zshrc
-local prompt_status="%(?,%{$fg[green]%}→%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+local prompt_status="%(?,%{$fg[green]%}→%{$reset_color%},%{$fg[red]%}→%{$reset_color%})"
 
 # }}}
 
